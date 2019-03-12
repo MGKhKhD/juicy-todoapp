@@ -18,11 +18,11 @@ class InputHeader extends React.Component {
   handleKeyPress(e) {
     if (e.key === "Enter") {
       this.props.addTodo(this.state.text.trim());
+      this.setState({ text: "" });
     }
   }
 
   render() {
-    console.log("input header");
     return (
       <Input
         placeholder="What needs to be done..."

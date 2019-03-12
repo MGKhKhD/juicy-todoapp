@@ -49,8 +49,6 @@ const list = {
 
 class App extends React.Component {
   render() {
-    console.log("props");
-    console.log(this.props);
     const { todos } = this.props;
     return (
       <Grid>

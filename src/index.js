@@ -11,8 +11,6 @@ import * as serviceWorker from "./serviceWorker";
 import "semantic-ui-css/semantic.min.css";
 
 const store = createStore(rootReducer, composeWithDevTools());
-console.log("in index");
-console.log(store.getState().todos);
 
 ReactDOM.render(
   <Provider store={store}>

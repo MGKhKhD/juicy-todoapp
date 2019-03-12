@@ -1,13 +1,12 @@
 import React from "react";
 import MainHeader from "./MainHeader";
-import { SegmentGroup, Item, Segment, Radio } from "semantic-ui-react";
+import { SegmentGroup, Item, Segment } from "semantic-ui-react";
 
 const TodoList = ({ todos }) => {
   let rows = [];
   Object.getOwnPropertyNames(todos).forEach(property => {
-    rows.push(<li>{todos[property].todo}</li>);
+    rows.push(<li key={property}>{todos[property].todo}</li>);
   });
-  console.log(rows);
 
   return (
     <SegmentGroup>
